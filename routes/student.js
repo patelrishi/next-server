@@ -55,5 +55,14 @@ router.delete('/delete-student/:id', async function(req,res,next){
   res.send(ex);
  }
 })
+
+router.post("/login", function(req,res,next){
+  const {uid,password}=req.body
+  if(uid=='nit' && password=="nitnit"){
+    res.send([{uid,password}])
+  } else {
+    res.send([])
+  }
+})
 //localhost:3030/student/register , post
 module.exports=router;
