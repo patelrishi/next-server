@@ -14,4 +14,4 @@ function validateToken(req, res, next) {
       res.send("token missing")
     }
     }
-module.exports = validateToken
+module.exports = validateToken;
